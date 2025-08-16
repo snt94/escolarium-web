@@ -1,3 +1,10 @@
-export default function HomePage() {
-  return <h1 className="text-2xl font-bold">Bem-vindo ao Sistema</h1>;
+import Image from "next/image";
+import Page from "./dashboard/page";
+
+export default function Home() {
+  return (
+   <div>
+    <Page/>
+   </div>
+  );
 }
