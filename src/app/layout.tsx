@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/components/Sidebar/Sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,17 +18,25 @@ export const metadata: Metadata = {
   description: "Nova forma de gestão escolar!",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+  isOpen: boolean;
+}
+
+export default function RootLayout({ children, isOpen }: RootLayoutProps) {
   return (
     <html lang="pt-br">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <main
+          className={`flex-1 transition-all duration-300 ease-in-out ml-${
+            isOpen ? "64" : "16"
+          }`}
+        >
+          {children}
+          <Sidebar />
+        </main>
       </body>
     </html>
   );
