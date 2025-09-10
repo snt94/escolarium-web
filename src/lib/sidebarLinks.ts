@@ -15,4 +15,11 @@ export const sidebarLinks = [
             { label: "Notas", href: "/pages/grades" },
         ],
     },
+        {
+        section: "Administrativo",
+        links: [
+            { label: "Finanças", href: "/pages/finances" },
+            { label: "Responsáveis", href: "/pages/parents" },
+        ],
+    },
 ];

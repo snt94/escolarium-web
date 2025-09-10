@@ -1,12 +1,20 @@
-import Sidebar from "@/components/Sidebar/Sidebar";
+import type { Metadata } from "next";
 import "./globals.css";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata: Metadata = {
+  title: "Escolarium",
+  description: "Sistema de Gestão Escolar",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="pt-BR">
-      <body className="flex bg-gray-100">
-        <Sidebar />
-        <main className="flex-1 p-6">{children}</main>
+      <body className="bg-gray-100">
+        {children}
       </body>
     </html>
   );

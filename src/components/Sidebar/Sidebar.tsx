@@ -8,7 +8,10 @@ import SidebarSection from "./SidebarSection";
 export default function Sidebar() {
   return (
     <aside className="w-64 h-screen bg-gray-900 text-white flex flex-col p-4">
-      <h2 className="text-xl font-bold mb-6">Escolarium</h2>
+      <div>
+        {/* <img></img> Escolarium Logo */}
+      <h2 className="flex text-xl font-bold mb-6 justify-center">Escolarium</h2>
+      </div>
       <nav className="flex flex-col gap-6">
         {sidebarLinks.map((section) => (
           <SidebarSection
