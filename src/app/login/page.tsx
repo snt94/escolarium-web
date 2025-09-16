@@ -1,4 +1,14 @@
+"use client"
+import { useState } from "react";
+
 export default function LoginPage() {
+  const [selectedRole, setSelectedRole] = useState<string | null>(null);
+
+  const roles = [
+    { label: "Estudante", value: "student" },
+    { label: "Professor", value: "teacher" },
+    { label: "Coordenador", value: "coordinator" },
+  ];
   return (
     <>
       <main className="flex justify-center items-center w-screen h-screen bg-gradient-to-br from-blue-100 to-gray-200">
@@ -20,7 +30,7 @@ export default function LoginPage() {
               </label>
               <input
                 type="email"
-                className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus: transition"
+                className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700 focus: transition"
               />
             </div>
 
@@ -30,34 +40,32 @@ export default function LoginPage() {
               </label>
               <input
                 type="password"
-                className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus: transition"
+                className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700 focus: transition"
               />
             </div>
 
             <div className="flex gap-3 mt-2">
-              <button
-                type="button"
-                className="flex-1 py-1 text-sm border border-gray-300 rounded-lg hover:bg-blue-200 transition"
-              >
-                Estudante
-              </button>
-              <button
-                type="button"
-                className="flex-1 py-1 text-sm border border-gray-300 rounded-lg hover:bg-blue-200 transition"
-              >
-                Professor
-              </button>
-              <button
-                type="button"
-                className="flex-1 py-1 text-sm border border-gray-300 rounded-lg hover:bg-blue-200 transition"
-              >
-                Coordenador
-              </button>
+              {roles.map((role) => (
+                <button
+                  key={role.value}
+                  type="button"
+                  onClick={() => setSelectedRole(role.value)}
+                  className={`flex-1 py-1 text-sm border rounded-lg transition
+                ${
+                  selectedRole === role.value
+                    ? "bg-blue-800 text-white border-blue-800"
+                    : "bg-gray-100 text-gray-800 border-gray-300 hover:bg-blue-200"
+                }
+              `}
+                >
+                  {role.label}
+                </button>
+              ))}
             </div>
 
             <button
               type="submit"
-              className="w-full bg-blue-900 text-white rounded-lg py-2 font-semibold hover:bg-blue-800 transition"
+              className="w-full bg-blue-900 text-white rounded-lg py-2 font-semibold hover:bg-blue-900 transition"
             >
               Entrar
             </button>
