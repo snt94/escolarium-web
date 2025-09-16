@@ -25,7 +25,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
   const valueColor = value >= 0 ? "text-green-600" : "text-red-600";
 
   return (
-    <div className="flex flex-col p-4 bg-white shadow-lg rounded-xl w-72 hover:shadow-2xl transition">
+    <div className="flex flex-col p-3 bg-white shadow-lg rounded-xl w-72 hover:shadow-2xl transition">
       {/* Título */}
       <h2 className="text-gray-500 text-sm font-medium">{title}</h2>
 

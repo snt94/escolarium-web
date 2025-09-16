@@ -9,7 +9,7 @@ const DashboardCard = () => {
   ];
 
   return (
-    <div className="p-6 grid grid-cols-3 gap-6">
+    <div className="p-3 grid grid-cols-2">
       <InfoCard
         title="Usuários Ativos"
         value={1234}

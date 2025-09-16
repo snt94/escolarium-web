@@ -4,7 +4,7 @@ import { ToggleButton } from "./ToggleButton";
 export default function RolesSelector() {
   const [selectedRole, setSelectedRole] = useState<string | null>(null);
 
-  const cargos = [
+  const roles = [
     { label: "Estudante", value: "estudante" },
     { label: "Coordenador", value: "coordenador" },
     { label: "Professor", value: "professor" },
@@ -12,12 +12,12 @@ export default function RolesSelector() {
 
   return (
     <div className="flex gap-4">
-      {cargos.map((cargo) => (
+      {roles.map((role) => (
         <ToggleButton
-          key={cargo.value}
-          label={cargo.label}
-          value={cargo.value}
-          selected={selectedRole === cargo.value}
+          key={role.value}
+          label={role.label}
+          value={role.value}
+          selected={selectedRole === role.value}
           onToggle={(value) =>
             setSelectedRole((prev) => (prev === value ? null : value))
           }
