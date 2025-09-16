@@ -2,24 +2,24 @@ export const sidebarLinks = [
     {
         section: "Principal",
         links: [
-            { label: "Dashboard", href: "/pages/dashboard" },
-            { label: "Avisos", href: "/pages/notices" },
+            { label: "Dashboard", href: "/dashboard" },
+            { label: "Avisos", href: "/notices" },
         ],
     },
     {
         section: "Acadêmico",
         links: [
-            { label: "Alunos", href: "/pages/students" },
-            { label: "Professores", href: "/pages/teachers" },
-            { label: "Turmas", href: "/pages/classes" },
-            { label: "Notas", href: "/pages/grades" },
+            { label: "Alunos", href: "/students" },
+            { label: "Professores", href: "/teachers" },
+            { label: "Turmas", href: "/classes" },
+            { label: "Notas", href: "/grades" },
         ],
     },
         {
         section: "Administrativo",
         links: [
-            { label: "Finanças", href: "/pages/finances" },
-            { label: "Responsáveis", href: "/pages/parents" },
+            { label: "Finanças", href: "/finances" },
+            { label: "Responsáveis", href: "/parents" },
         ],
     },
 ];
