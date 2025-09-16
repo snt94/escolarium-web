@@ -20,7 +20,7 @@ export default function LoginPage() {
               </label>
               <input
                 type="email"
-                className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus: transition"
               />
             </div>
 
@@ -30,7 +30,7 @@ export default function LoginPage() {
               </label>
               <input
                 type="password"
-                className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus: transition"
               />
             </div>
 
